@@ -1,24 +1,22 @@
 <template>
-  <g-field @is-selected="(val) => (selected = val)">
-    <div class="column full-width">
-      <q-badge
-        class="text-caption text-center bg-transparent text-black"
-        :class="{ 'bg-red': selected }"
-      >
-        {{ props.label }}
-      </q-badge>
-      <div class="q-mx-auto">
-        <q-slider
-          v-model="model"
-          reverse
-          thumb-size="0"
-          track-size="10px"
-          label
-          vertical
-          v-bind="$attrs"
-          @update:model-value="(val) => console.log(val)"
-        />
-      </div>
+  <g-field :no-field="noField" @is-selected="(val) => (selected = val)">
+    <q-badge
+      class="text-caption text-center bg-transparent text-black q-mx-auto"
+      :class="{ 'bg-red': selected }"
+    >
+      {{ props.label }}
+    </q-badge>
+    <div class="q-mx-auto">
+      <q-slider
+        v-model="model"
+        reverse
+        thumb-size="0"
+        track-size="10px"
+        label
+        vertical
+        v-bind="$attrs"
+        @update:model-value="(val) => console.log(val)"
+      />
     </div>
   </g-field>
 </template>
@@ -33,6 +31,10 @@ const props = defineProps({
   label: {
     type: String,
     default: "",
+  },
+  noField: {
+    type: Boolean,
+    default: false,
   },
 });
 </script>

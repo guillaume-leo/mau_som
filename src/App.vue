@@ -1,17 +1,9 @@
 <template>
   <div class="row">
-    <g-slider label="slider" size="xs" />
-    <g-slider label="slider" size="xs" />
-    <g-slider label="slider" size="xs" />
-    <g-slider label="slider" size="xs" />
-    <g-slider label="slider" size="xs" />
-    <g-slider label="slider" size="xs" />
-    <g-slider label="slider" size="xs" />
-    <g-slider label="slider" size="xs" />
-    <g-slider label="slider" size="xs" />
-    <g-slider label="slider" size="xs" />
-    <g-slider label="slider" size="xs" />
-    <g-slider label="slider" size="xs" />
+    <g-slider no-field label="slider" />
+    <g-slider label="slider" />
+    <g-slider label="slider" />
+    <g-slider label="slider" />
   </div>
 </template>
 
